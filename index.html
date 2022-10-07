@@ -5,17 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto Treno Form</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
         <!-- CALCULATE SECTION -->
         <section>
+            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             <!-- FORM -->
             <div>
-                <!-- <div>
-                    <label for="full-name">Nome e Cognome</label>
-                    <input type="text" name="" id="full-name">
-                </div> -->
+                <div>
+                    <label for="fullName">Nome e Cognome</label>
+                    <input type="text" name="" id="fullName">
+                </div>
 
                 <div>
                     <label for="km">Km da percorrere</label>
@@ -35,6 +47,10 @@
                 <div>
                     <button id="submit">Genera</button>
                 </div>
+
+                <div>
+                    <button id="cancel">Annulla</button>
+                </div>
             </div>
             <!-- FORM -->
         </section>
@@ -42,8 +58,32 @@
 
         <!-- TICKET SECTION -->
         <section>
-            <h4>Costo Biglietto</h4>
-            <span id="priceTxt"></span>
+            <h2 class="fs-1">IL TUO BIGLIETTO</h2>
+            <div>
+                <h4>DETTAGLIO PASSEGGERI</h4>
+                <div class="row g-3">
+                    <div class="col-3 p-3">
+                        <span class="fs-5 fw-bold d-block">NOME PASSEGGERO</span>
+                        <span id="fullNameTxt"></span>
+                    </div>
+                    <div class="col p-3">
+                        <span class="fw-bold d-block">Offerta</span>
+                        <span id="ticketTypeTxt"></span>
+                    </div>
+                    <div class="col p-3">
+                        <span class="fw-bold d-block">Carrozza</span>
+                        <span id="carriageTxt"></span>
+                    </div>
+                    <div class="col p-3">
+                        <span class="fw-bold d-block">Codice CP</span>
+                        <span id="codeTxt"></span>
+                    </div>
+                    <div class="col p-3">
+                        <span class="fw-bold d-block">Costo Biglietto</span>
+                        <span id="priceTxt"></span>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- TICKET SECTION -->
     </main>
