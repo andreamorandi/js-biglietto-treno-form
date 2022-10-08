@@ -20,36 +20,40 @@
 <body>
     <main>
         <!-- CALCULATE SECTION -->
-        <section>
-            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <section class="text-black">
+            <h1 class="text-center mt-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             <!-- FORM -->
-            <div>
-                <div>
-                    <label for="fullName">Nome e Cognome</label>
-                    <input type="text" name="" id="fullName">
+            <div class="ms_main-box">
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col text-center">
+                        <label for="fullName" class="d-block">Nome e Cognome</label>
+                        <input type="text" name="" id="fullName" class="form-control ms_input mt-2 mb-5">
+                    </div>
+
+                    <div class="col text-center">
+                        <label for="km" class="d-block">Km da percorrere</label>
+                        <input type="text" name="" id="km" class="form-control ms_input mt-2 mb-5">
+                    </div>
+
+                    <div class="col text-center">
+                        <label for="age" class="d-block">Fascia d'età</label>
+                        <select name="" id="age" class="form-select ms_input p-0 mt-2 mb-5">
+                            <option value=""></option>
+                            <option value="minor">Minorenne</option>
+                            <option value="adult">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="km">Km da percorrere</label>
-                    <input type="text" name="" id="km">
-                </div>
-
-                <div>
-                    <label for="age">Fascia d'età</label>
-                    <select name="" id="age">
-                        <option value=""></option>
-                        <option value="minor">Minorenne</option>
-                        <option value="adult">Maggiorenne</option>
-                        <option value="over65">Over 65</option>
-                    </select>
-                </div>
-
-                <div>
-                    <button id="submit">Genera</button>
-                </div>
-
-                <div>
-                    <button id="cancel">Annulla</button>
+                <div class="row row-cols-2 justify-content-center">
+                    <div class="col text-end">
+                        <button id="submit" class="btn ms_btn">Genera</button>
+                    </div>
+    
+                    <div class="col">
+                        <button id="cancel" class="btn ms_btn">Annulla</button>
+                    </div>
                 </div>
             </div>
             <!-- FORM -->
@@ -57,29 +61,29 @@
         <!-- /CALCULATE SECTION -->
 
         <!-- TICKET SECTION -->
-        <section>
-            <h2 class="fs-1">IL TUO BIGLIETTO</h2>
-            <div>
+        <section class="text-black">
+            <h2 class="fs-1 text-center">IL TUO BIGLIETTO</h2>
+            <div class="ms_box">
                 <h4>DETTAGLIO PASSEGGERI</h4>
-                <div class="row g-3">
-                    <div class="col-3 p-3">
-                        <span class="fs-5 fw-bold d-block">NOME PASSEGGERO</span>
-                        <span id="fullNameTxt"></span>
+                <div class="row g-3 mt-2 flex-column flex-md-row border-top border-bottom border-dark">
+                    <div class="col-12 col-md-3 mt-0 p-3 ms_bg-tertiary">
+                        <span class="fs-5 fw-bold d-block mb-3 mb-md-0">NOME PASSEGGERO</span>
+                        <span id="fullNameTxt" class="fw-bold"></span>
                     </div>
-                    <div class="col p-3">
-                        <span class="fw-bold d-block">Offerta</span>
+                    <div class="col p-3 mt-0">
+                        <span class="fw-bold d-block mb-4">Offerta</span>
                         <span id="ticketTypeTxt"></span>
                     </div>
-                    <div class="col p-3">
-                        <span class="fw-bold d-block">Carrozza</span>
+                    <div class="col p-3 mt-0">
+                        <span class="fw-bold d-block mb-4">Carrozza</span>
                         <span id="carriageTxt"></span>
                     </div>
-                    <div class="col p-3">
-                        <span class="fw-bold d-block">Codice CP</span>
+                    <div class="col p-3 mt-0">
+                        <span class="fw-bold d-block mb-4">Codice CP</span>
                         <span id="codeTxt"></span>
                     </div>
-                    <div class="col p-3">
-                        <span class="fw-bold d-block">Costo Biglietto</span>
+                    <div class="col p-3 mt-0">
+                        <span class="fw-bold d-block mb-4">Costo Biglietto</span>
                         <span id="priceTxt"></span>
                     </div>
                 </div>

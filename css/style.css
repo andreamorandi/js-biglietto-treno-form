@@ -1,4 +1,112 @@
-body {
-    font-family: 'Roboto', sans-serif;
+:root {
+    --ms_primary-color: #b91547;
+    --ms_secondary-color: #f79757;
+    --ms_tertiary-color: #c5c5c5;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    background-size: 500% 500%;
+    animation: gradient 20s ease infinite;
+}
+
+h1, 
+h2 {
+    font-weight: 600;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.ms_bg-tertiary {
+    background-color: var(--ms_tertiary-color);
+}
+
+.ms_main-box {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,1);
+    padding: 2rem;
+}
+
+.ms_box {
+    width: 80%;
+    margin: .5rem auto;
+    background-color: white;
+    border-radius: .25rem;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.25);
+    padding: 2rem;
+}
+
+.ms_main-box label {
+    color: var(--ms_primary-color);
+}
+
+.form-control.ms_input,
+.form-select.ms_input {
+    width: 10rem;
+    height: 1.75rem;
+    line-height: 1.5rem;
+    border-radius: .25rem;
+    display: inline-block;
+    text-align: center;
+    border: 1.5px solid var(--ms_primary-color);
+}
+
+.form-control.ms_input:focus,
+.form-select.ms_input:focus {
+    border-color: var(--ms_secondary-color);
+    box-shadow: none;
+}
+
+.btn.ms_btn {
+    font-weight: 500;
+    color: var(--ms_primary-color);
+    background-color: var(--ms_tertiary-color);
+    border: 1.5px solid black;
+}
+
+.btn.ms_btn:hover {
+    font-weight: 500;
+    color: var(--ms_primary-color);
+    background-color: var(--ms_tertiary-color);
+    border: 1.5px solid var(--ms_primary-color);
+}
+
+.btn.ms_btn:active {
+    font-weight: 500;
+    color: var(--ms_secondary-color);
+    background-color: var(--ms_tertiary-color);
+    border: 1.5px solid var(--ms_secondary-color);
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
